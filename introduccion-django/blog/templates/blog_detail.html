@@ -4,4 +4,6 @@ detail
 {{ post.title }}
 <br>
 {{ post.content }}
+<br>
+<a href="{% url 'blog:update' post.id %}">Update</a>
 
