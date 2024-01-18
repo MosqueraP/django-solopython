@@ -1,19 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
 Blog list
 <br>
 {% for post in posts %}
-
     <!-- ver los detalles del post -->
     <a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a>
-
-  
     <br>
-    <br>
- 
-    <!-- {{ post.content }} -->
-
 {% endfor %}
-
-<br>
-
     <!-- Crar nuevo post post -->
+<br>
 <a href="{% url 'blog:create' %}">Create</a>
+{% endblock %}
